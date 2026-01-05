@@ -40,24 +40,24 @@ Over time, this portfolio will evolve into a **self-updating site** that integra
 ## 📁 Project Structure
 
 /
-├── README.md
-├── src/          # Application source code
-├── public/       # Static assets
-├── content/      # Project + blog content
-├── scripts/      # Automation and data-fetching scripts
-├── docs/         # Planning and architecture notes
-└── .github/
-    └── workflows/ # CI/CD workflows
+├── README.md  
+├── src/          # Application source code  
+├── public/       # Static assets  
+├── content/      # Project + blog content  
+├── scripts/      # Automation and data-fetching scripts  
+├── docs/         # Planning and architecture notes  
+└── .github/  
+    └── workflows/ # CI/CD workflows  
 
 ---
 
-📌 Status 
+##📌 Status 
 This Project is currently in **early development**.
 Inital setup and planning are in progess.
 
 ---
 
-👤 Author
+##👤 Author
 **Jeffery Achamfuor**
 Computer Science student at Virginia Tech
 GitHub: https://github.com/Jachamfuor
