@@ -39,7 +39,7 @@ Over time, this portfolio will evolve into a **self-updating site** that integra
 
 ## 📁 Project Structure
 
-/  
+/   
 ├── README.md  
 ├── src/          # Application source code  
 ├── public/       # Static assets  
