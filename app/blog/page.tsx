@@ -1,3 +1,7 @@
+/** 
+ * This file contains the Blog Page UI
+*/
+
 export default function BlogPage() {
   return (
     <section>
