@@ -15,12 +15,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className="min-h-screen bg:white text-black"
+        className="min-h-screen text-center bg:white text-black"
       >
         <Navbar />
         <main className="mx-auto max-w-5xl px-4 py-10">{children}</main>
           <footer className="border-t py-8">
-            <div className="mx-auto max-w-5xl px-4 text-sm text-gray-600">
+            <div className="mx-auto max-w-5xl px-4 text-sm  text-gray-600">
               © {new Date().getFullYear()} Jeffery Achamfuor
             </div>
           </footer>

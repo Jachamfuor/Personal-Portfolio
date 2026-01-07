@@ -1,6 +1,7 @@
 "use client";
 import Link from "next/link";
 import ProjectCard from "./components/ProjectCard";
+import SkillCard from "./components/SkillCard";
 import Button from "./components/Button";
 import { TypeAnimation } from 'react-type-animation';
 
@@ -14,25 +15,26 @@ export default function Home() {
       {/* HERO */}
       <div className="space-y-4">
         <h1 className="text-4xl text-center font-bold tracking-tight mt-75 mb-75">
-          Jeffery Achamfuor<br />
+          Hello, I'm Jeffery Achamfuor<br /> 
+          <span className="text-2xl text-center font-bold tracking-tight"> </span>
           <TypeAnimation
             sequence={[
-              "I am a Computer Science Student",
+              "Computer Science Student",
               1000,
-              "I am a Software Developer",
+              "Software Developer",
               1000,
-              "I am a Web Developer",
+              "Web Developer",
               1000,
-              "I am a Full-Stack Developer",
+              "Full-Stack Developer",
               1000,
-              "I am a Problem Solver",
+              "Problem Solver",
               1000,
-              "I am a Innovator",
+              "Innovator",
               1000
             ]}
             wrapper="span"
             speed={30}
-            className="text-2xl text-center font-bold tracking-tight"
+            className="text-2xl text-center font-bold tracking-tight text-glow"
             repeat={Infinity}
           />
         </h1>
@@ -55,7 +57,7 @@ export default function Home() {
 
       {/* ABOUT ME */}
       <div className="bg-neutral-200/5 rounded-md ">
-        <h1 className="text-2xl font-mono font-bold text-center">About Me</h1>
+        <h1 className="text-2xl font-mono font-semibold text-center">About Me</h1>
         <p className="text=lg text-center text-gray-600 max-w-5xl mb-25">
           Computer Science student at Virginia Tech with hands-on experience in data structures, AI, systems programming, and
           human-centered security research, seeking a Summer 2026 software engineering internship.
@@ -95,13 +97,29 @@ export default function Home() {
 
       {/* SKILLS */}
       <div className="space-y-4">
-        <h2 className="text-2xl font-semibold">Skills</h2>
+        <h1 className="text-2xl font-semibold">Skills</h1>
+        <h2 className="font-mono font-semibold">My arsenal for building applications</h2>
 
-        <ul className="grid gap-2 text-gray-700 sm:grid-cols-2">
-          <li><strong>Languages:</strong> Java, Python, C, TypeScript</li>
-          <li><strong>Frameworks:</strong> React, Next.js</li>
-          <li><strong>Tools:</strong> Git, GitHub Actions, Linux</li>
-          <li><strong>Concepts:</strong> Data Structures, Systems, Automation</li>
+        <ul className="grid gap-2 text-gray-700 sm:grid-cols-1">
+          <SkillCard
+          title="Languages"
+          skills={["Java", "Python", "C", "TypeScript"]}
+          />
+
+            <SkillCard
+          title="Frameworks"
+          skills={["React", "Next.js"]}
+          />
+
+          <SkillCard
+          title="Tools"
+          skills={["GitHub", "GitHub Actions", "Linux"]}
+          />
+
+          <SkillCard
+          title="Concepts"
+          skills={["Data Structures and Algorthims", "Systems", "Artfical Intellegence", "Automation"]}
+          />
         </ul>
       </div>
 

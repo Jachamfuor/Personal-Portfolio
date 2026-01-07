@@ -24,3 +24,33 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* Custom CSS for forward shadow and glow */
+.text-shadow-forward {
+  text-shadow: 
+    1px 1px 0px #ff0000, /* Red shadow layer 1 (adjust color/offset) */
+    2px 2px 0px #e60000, /* Red shadow layer 2 */
+    3px 3px 0px #cc0000; /* Red shadow layer 3, etc. for a "forward" look */
+}
+
+.text-glow {
+  /* This creates a neon/glow effect */
+  text-shadow: 
+    0 0 5px #e640de, /* Cyan glow layer 1 (adjust color/blur) */
+    0 0 10px #e640de, /* Cyan glow layer 2 */
+    0 0 15px #e640de; /* Cyan glow layer 3 */
+}
+
+/* Optional: Animation for an animated glow effect */
+@keyframes pulse-glow {
+  0%, 100% {
+    text-shadow: 0 0 5px #e640de, 0 0 10px #e640de, 0 0 15px #e640de;
+  }
+  50% {
+    text-shadow: 0 0 10px #e640de, 0 0 20px #e640de, 0 0 30px #e640de;
+  }
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2s infinite alternate;
+}

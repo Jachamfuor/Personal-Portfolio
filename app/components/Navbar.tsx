@@ -11,7 +11,7 @@ const links = [
 
 export default function NavBar(){
     return (
-        <header className="sticky top-0 z-50 border-b bg-white/70 backdrop-blur">
+        <header className="sticky top-0 z-50 bg-white/50 backdrop-blur">
             <nav className="mx-auto flex max-w-5xl items-center justify-between px-4 py-3">
                 <Link href="/" className="font-semibold tracking-tight">
                     Jeffery Achamfuor
