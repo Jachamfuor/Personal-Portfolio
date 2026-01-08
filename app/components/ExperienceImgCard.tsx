@@ -1,40 +1,50 @@
 import Button from "./Button";
 import CardShell from "./CardShell";
 
-type ProjectCardInfo = {
+type CardInfo = {
+    img: string;
+    imgDscp: string;
     title: string;
     description: string;
     techs: string[];
     href: string;
 }
 
-export default function ProjectCard({
+export default function CardwImg({
+    img,
+    imgDscp,
     title,
     description,
     techs = [],
     href,
-}: ProjectCardInfo) {
+}: CardInfo) {
     return (
-        <CardShell className="text-center flex flex-col gap-5 h-full">
+        <CardShell className="text-left flex flex-col overflow-hidden">
+            <img
+                src={img}
+                alt={imgDscp}
+                className="w-full h-48 object-cover shadow-md"
+            />
+
+            {/* CONTENT */}
             <div className="p-4 sm:p-5 lg:p-6 flex flex-col gap-4 lg:gap-5 flex-1">
-                {/* TITLE & DESCRIPTION */}
                 <div className="space-y-2">
                     <h3 className="text-lg font-semibold text-black leading-snug">
                         {title}
                     </h3>
-                    <p className="text-sm text-black leading-relaxed">
+                    <p className="text-sm text-gray-700 leading-relaxed">
                         {description}
                     </p>
                 </div>
 
                 {/* Skill Bubbles */}
                 {techs.length > 0 && (
-                    <ul className="flex justify-center flex-wrap gap-2">
+                    <ul className="flex flex-wrap gap-2">
                         {techs.map((tech, i) => (
                             <li
                                 key={`${tech}-${i}`}
-                                className="rounded-full border px-3 py-1 text-xs text-gray-600">
-                                {/*Try this later: rounded-full border border-gray-200 bg-gray-50 px-3 py-1 text-xs text-gray-600 */}
+                                className="rounded-full border px-3 py-1 text-xs text-gray-500"> 
+                                {/*try this maybe: rounded-full border border-gray-200 bg-gray-50 px-3 py-1 text-xs text-gray-600 */}
                                 {tech}
                             </li>
                         ))}
@@ -43,12 +53,12 @@ export default function ProjectCard({
 
                 {/* BUTTON */}
                 <div className="mt-auto pt-2">
-                    <Button
-                        description="GitHub"
-                        href={href}
-                        variant="hover"
-                        external
-                    />
+                <Button
+                    description="GitHub"
+                    href={href}
+                    variant="hover"
+                    external
+                />
                 </div>
             </div>
         </CardShell>

@@ -2,54 +2,52 @@ import Button from "./Button";
 import CardShell from "./CardShell";
 
 type ProjectCardInfo = {
-    title: string;
+    role: string;
+    job: string;
+    time: string;
     description: string;
-    techs: string[];
-    href: string;
+    skills: string[];
 }
 
-export default function ProjectCard({
-    title,
+export default function ExpCard({
+    role,
+    job,
+    time,
     description,
-    techs = [],
-    href,
+    skills = [],
 }: ProjectCardInfo) {
     return (
-        <CardShell className="text-center flex flex-col gap-5 h-full">
+        <CardShell className="text-left flex flex-col h-full min-h-105">
             <div className="p-4 sm:p-5 lg:p-6 flex flex-col gap-4 lg:gap-5 flex-1">
                 {/* TITLE & DESCRIPTION */}
                 <div className="space-y-2">
+                    <span className="inline-block w-fit rounded-full border border-gray-200 bg-gray-50 px-3 py-2 text-sm font-bold font-mono text-gray-600">
+                        {time}
+                    </span>
                     <h3 className="text-lg font-semibold text-black leading-snug">
-                        {title}
+                        {role}
                     </h3>
-                    <p className="text-sm text-black leading-relaxed">
+                    <h4 className="text-md font-semibold text-black leading-snug">
+                        {job}
+                    </h4>
+                    <p className="text-sm text-black leading-relaxed line-clamp-4">
                         {description}
                     </p>
                 </div>
 
                 {/* Skill Bubbles */}
-                {techs.length > 0 && (
+                {skills.length > 0 && (
                     <ul className="flex justify-center flex-wrap gap-2">
-                        {techs.map((tech, i) => (
+                        {skills.map((skill, i) => (
                             <li
-                                key={`${tech}-${i}`}
+                                key={`${skill}-${i}`}
                                 className="rounded-full border px-3 py-1 text-xs text-gray-600">
                                 {/*Try this later: rounded-full border border-gray-200 bg-gray-50 px-3 py-1 text-xs text-gray-600 */}
-                                {tech}
+                                {skill}
                             </li>
                         ))}
                     </ul>
                 )}
-
-                {/* BUTTON */}
-                <div className="mt-auto pt-2">
-                    <Button
-                        description="GitHub"
-                        href={href}
-                        variant="hover"
-                        external
-                    />
-                </div>
             </div>
         </CardShell>
     )
