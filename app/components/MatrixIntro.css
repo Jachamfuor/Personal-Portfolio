@@ -1,0 +1,117 @@
+.matrix-intro-root {
+  position: fixed;
+  inset: 0;
+  background: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10000;
+  overflow: hidden;
+}
+
+.matrix-canvas-layer {
+  position: absolute;
+  inset: 0;
+  z-index: -1; 
+  opacity: 0.35;
+}
+
+.matrix-name-box {
+  position: relative;
+  z-index: 10;
+  font-family: 'Inter', sans-serif;
+  font-weight: 900;
+  font-size: clamp(2rem, 10vw, 5rem);
+  color: #ffffff;
+}
+
+.name-wrapper {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  position: relative;
+  /* Ensure the container itself transitions smoothly as its width changes */
+  transition: all 1s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.letter-anchor {
+  display: flex;
+  align-items: baseline;
+  position: relative;
+}
+
+.initial-letter {
+  position: relative;
+  z-index: 20;
+}
+
+/* --- THE SEAMLESS SLIDE --- */
+.hinge-text {
+  display: inline-block;
+  transform-origin: left;
+  white-space: nowrap;
+  /* We define a specific width or use auto with a max-width transition */
+  width: auto;
+  max-width: 500px; 
+  opacity: 1;
+  transition: 
+    transform 0.8s ease-in, 
+    opacity 0.5s ease, 
+    max-width 1s cubic-bezier(0.4, 0, 0.2, 1); /* This creates the slide */
+}
+
+/* During RECENTER, we shrink the max-width to 0. 
+   Because the parent is centered, 'JA' will slide right to stay in the middle. */
+.stage-fold .hinge-text,
+.stage-recenter .hinge-text {
+  transform: rotateY(-110deg);
+  opacity: 0;
+  max-width: 0; 
+  pointer-events: none;
+}
+
+/* Remove completely for expansion to avoid the 'chamfuorchamfuor' bug */
+.stage-expand .hinge-text {
+  display: none !important;
+}
+
+/* --- THE EXPANSIONS --- */
+.expand-jeffery, 
+.expand-achamfuor {
+  max-width: 0;
+  opacity: 0;
+  overflow: hidden;
+  display: inline-block;
+  white-space: nowrap;
+  color: #fcfcfc;
+  text-shadow: 0 0 10px rgba(0, 255, 65, 0.8);
+  transition: max-width 1.2s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.6s ease;
+}
+
+.stage-expand .expand-jeffery {
+  max-width: 500px;
+  opacity: 1;
+}
+
+.stage-expand .expand-achamfuor {
+  max-width: 600px;
+  opacity: 1;
+}
+
+/* GAP CONTROL */
+.name-space {
+  width: 0;
+  display: inline-block;
+  transition: width 1s ease;
+}
+
+.stage-expand .name-space {
+  width: 0.35em;
+}
+
+/* EXIT */
+.matrix-exit {
+  opacity: 0;
+  filter: blur(15px);
+  transition: 1.2s ease;
+}

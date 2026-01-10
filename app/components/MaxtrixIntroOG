@@ -1,0 +1,264 @@
+/* Container and Matrix Background */
+.matrix-intro-root {
+  position: fixed;
+  inset: 0;
+  background: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10000; /* Ensure it stays on top */
+  perspective: 1200px;
+  overflow: hidden;
+}
+
+.matrix-canvas-layer {
+  position: absolute;
+  inset: 0;
+  opacity: 0.35;
+}
+
+/* Typography Base */
+.matrix-name-box {
+  display: flex;
+  align-items: baseline;
+  font-family: 'Inter', system-ui, sans-serif;
+  font-weight: 900;
+  font-size: clamp(2rem, 10vw, 5rem);
+  color: #ffffff;
+  position: relative;
+  transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Stage: FOLDING (The 'chamfuor' part) */
+.hinge-text {
+  display: inline-block;
+  transform-origin: left center;
+  transition: transform 0.9s ease-in, opacity 0.6s ease-in;
+  position: relative;
+}
+
+.stage-fold .hinge-text {
+  transform: rotateY(-115deg);
+  opacity: 0;
+}
+
+/* Stage: RECENTER (The 'JA' slide) */
+.stage-recenter {
+  transform: translateX(18%); /* Adjust this until JA looks centered */
+}
+
+/* Stage: EXPAND (The J Flip and A Stretch) */
+.j-flip-container {
+  perspective: 1000px;
+  line-height: 1;
+}
+
+.j-flip-card {
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.stage-expand .j-flip-card {
+  transform: rotateX(180deg);
+}
+
+.j-card-back {
+  position: absolute;
+  inset: 0;
+  transform: rotateX(180deg);
+  backface-visibility: hidden;
+  white-space: nowrap;
+  color: #00ff41; /* Matrix Green */
+}
+
+.a-slide-text {
+  max-width: 0;
+  opacity: 0;
+  overflow: hidden;
+  display: inline-block;
+  white-space: nowrap;
+  transition: max-width 1s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.5s;
+}
+
+.stage-expand .a-slide-text {
+  max-width: 600px;
+  opacity: 1;
+}
+
+/* Glitch Trigger */
+@keyframes matrix-glitch {
+  0% { text-shadow: 3px 0 #ff00c1, -3px 0 #00fff9; transform: translate(2px, -1px); }
+  25% { text-shadow: -3px 0 #ff00c1, 3px 0 #00fff9; transform: translate(-2px, 1px); }
+  50% { text-shadow: 2px 0 #00ff41, -2px 0 #ff00c1; transform: translate(1px, 2px); }
+  100% { text-shadow: 0px 0 transparent; transform: translate(0); }
+}
+
+.stage-expand .matrix-name-box {
+  animation: matrix-glitch 0.4s ease-out 2;
+}
+
+/* Exit Fade */
+.matrix-exit {
+  opacity: 0;
+  filter: blur(15px);
+  transition: opacity 1s ease, filter 1s ease;
+  pointer-events: none;
+}
+
+
+
+
+=============================
+
+/* --- ROOT & OVERLAY --- */
+.matrix-intro-root {
+  position: fixed;
+  inset: 0;
+  background: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10000;
+  overflow: hidden;
+}
+
+.matrix-canvas-layer {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  opacity: 0.35;
+}
+
+/* --- NAME CONTAINER --- */
+.matrix-name-box {
+  position: relative;
+  z-index: 10;
+  font-family: 'Inter', sans-serif;
+  font-weight: 900;
+  font-size: clamp(2rem, 10vw, 5rem);
+  color: #ffffff;
+}
+
+.name-wrapper {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  position: relative;
+}
+
+.initial-letter {
+  position: relative;
+  z-index: 15;
+}
+
+/* --- JEFFERY EXPANSION (STRETCH) --- */
+.expand-jeffery {
+  max-width: 0;
+  opacity: 0;
+  overflow: hidden;
+  display: inline-block;
+  white-space: nowrap;
+  color: #00ff41;
+  /* Green Matrix Glow */
+  text-shadow: 0 0 8px rgba(0, 255, 65, 0.8), 0 0 20px rgba(0, 255, 65, 0.4);
+  transition: max-width 1.2s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.6s ease;
+}
+
+.stage-expand .expand-jeffery {
+  max-width: 500px;
+  opacity: 1;
+}
+
+/* --- THE SPACE BETWEEN NAMES --- */
+.name-space {
+  width: 0;
+  display: inline-block;
+  overflow: hidden;
+  transition: width 0.8s ease;
+}
+
+.stage-expand .name-space {
+  width: 0.35em;
+}
+
+/* --- ACHAMFUOR HINGE (THE SLIDE LOGIC) --- */
+.hinge-text {
+  display: inline-block;
+  transform-origin: left;
+  white-space: nowrap;
+  opacity: 1;
+  width: auto;
+  flex-shrink: 0;
+  transition: 
+    transform 0.8s ease-in, 
+    opacity 0.6s ease, 
+    width 0.8s cubic-bezier(0.4, 0, 0.2, 1), 
+    letter-spacing 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Animating width to 0 here is what slides the "JA" to the center */
+.stage-fold .hinge-text,
+.stage-recenter .hinge-text {
+  transform: rotateY(-110deg);
+  opacity: 0;
+  width: 0;
+  letter-spacing: -1em;
+  pointer-events: none;
+}
+
+/* CRITICAL FIX: Ensures "chamfuor" doesn't appear twice at the end */
+.stage-expand .hinge-text {
+  display: none !important;
+}
+
+/* --- ACHAMFUOR EXPANSION (FINAL REVEAL) --- */
+.expand-achamfuor {
+  max-width: 0;
+  opacity: 0;
+  overflow: hidden;
+  display: inline-block;
+  white-space: nowrap;
+  color: #00ff41;
+  /* Green Matrix Glow */
+  text-shadow: 0 0 8px rgba(0, 255, 65, 0.8), 0 0 20px rgba(0, 255, 65, 0.4);
+  transition: max-width 1.2s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.6s ease;
+}
+
+.stage-expand .expand-achamfuor {
+  max-width: 600px;
+  opacity: 1;
+}
+
+/* --- EXIT FADE --- */
+.matrix-exit {
+  opacity: 0;
+  filter: blur(15px);
+  transition: opacity 1.2s ease, filter 1s ease;
+}
+
+
+
+
+
+
+
+<div className="name-wrapper">
+                    {/* LEFT SIDE */}
+                    <span className="initial-letter">J</span>
+                    <span className="expand-jeffery">effery</span>
+
+                    {/* SPACER */}
+                    <span className="name-space">&nbsp;</span>
+
+                    {/* RIGHT SIDE */}
+                    <span className="initial-letter">A</span>
+
+                    {/* FIXED: React will physically remove this element when expansion starts */}
+                    {stage !== 'expand' && stage !== 'fade' && (
+                        <span className="hinge-text">chamfuor</span>
+                    )}
+
+                    {/* This part only grows during expansion */}
+                    <span className="expand-achamfuor">chamfuor</span>
+                </div>

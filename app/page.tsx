@@ -9,15 +9,26 @@ import Bubble from "./components/TextBubbles";
 import { Code2, Monitor, Wrench, Lightbulb } from "lucide-react";
 import { TypeAnimation } from 'react-type-animation';
 import CarouselRow from "./components/CarouselRow";
+import { useState } from "react";
+import IntroOverlay from "./components/IntroOverlay";
+import MatrixIntro from "./components/MatrixIntro";
 
 /** 
  * This file contains the Home Page UI
 */
 
 export default function Home() {
+  const [introFinished, setIntroFinished] = useState(false);
+
   return (
-    <main className="mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8">
+    <>
+      {!introFinished && (
+        <MatrixIntro onAnimationComplete={() => setIntroFinished(true)} />
+      )}
+      
+      <main className={introFinished ? "opacity-100" : "opacity-0"}>
       <section className="space-y-12 sm:space-y-16 lg:space-y-20 py-12 sm:py-16 lg:py-20">
+        
         {/* HERO */}
         <div className="space-y-6 sm:space-y-8 text-center">
           <header className="text-4xl sm:text-5xl font-bold tracking-tight mt-50 mb-60">
@@ -352,6 +363,24 @@ export default function Home() {
           </div>
       </section >
     </main>
+    </>
   );
 }
 
+{/** 
+  
+  
+export default function Home() {
+
+   const [introDone, setIntroDone] = useState(false);
+
+  return (
+
+     <>
+
+      {!introDone && <IntroOverlay onDone={() => setIntroDone(true)} />}
+
+    <main className="mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8">
+  
+  
+  */}
