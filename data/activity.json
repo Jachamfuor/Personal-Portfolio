@@ -1,20 +1,20 @@
 {
-  "generatedAt": "2026-01-11T02:00:19.717Z",
+  "generatedAt": "2026-01-11T03:16:36.449Z",
   "username": "Jachamfuor",
   "recentCommits": [
+    {
+      "repo": "Jachamfuor/Personal-Portfolio",
+      "message": "feat: show latest GitHub actviity on homepage",
+      "sha": "dbd9314cf9ed5e38fd8893cdf459caf9fc78d572",
+      "url": "https://github.com/Jachamfuor/Personal-Portfolio/commit/dbd9314cf9ed5e38fd8893cdf459caf9fc78d572",
+      "createdAt": "2026-01-11T02:03:07Z"
+    },
     {
       "repo": "Jachamfuor/Personal-Portfolio",
       "message": "start GitHub actviity generator",
       "sha": "ddfa5d1eb06ad8fc86adf74c8293a18245e7a38c",
       "url": "https://github.com/Jachamfuor/Personal-Portfolio/commit/ddfa5d1eb06ad8fc86adf74c8293a18245e7a38c",
       "createdAt": "2026-01-11T01:15:15Z"
-    },
-    {
-      "repo": "Jachamfuor/Personal-Portfolio",
-      "message": "Added MDX blog",
-      "sha": "12fd955fa308351538718685ecef6c0682fd74b2",
-      "url": "https://github.com/Jachamfuor/Personal-Portfolio/commit/12fd955fa308351538718685ecef6c0682fd74b2",
-      "createdAt": "2026-01-10T23:17:42Z"
     }
   ],
   "recentRepos": [
@@ -25,7 +25,7 @@
       "language": "TypeScript",
       "stars": 0,
       "url": "https://github.com/Jachamfuor/Personal-Portfolio",
-      "updatedAt": "2026-01-11T01:28:41Z"
+      "updatedAt": "2026-01-11T02:03:12Z"
     }
   ]
 }

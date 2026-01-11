@@ -14,7 +14,7 @@ export default function ProjectsPage() {
                 <ProjectCard 
                 title="Example Card"
                 description="Fill later"
-                tech="x,y,z"
+                techs={["x,y,z"]}
                 href=""
                 />
             </div>
