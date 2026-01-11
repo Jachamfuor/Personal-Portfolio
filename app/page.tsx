@@ -288,6 +288,15 @@ export default function Home() {
                 techs={["Java", "Data Structures", "Algorithms"]}
                 href="#"
               />
+
+              <ExperienceImgCard
+                img="./waves.jpg"
+                title="Self-Updating Portfolio"
+                description="A portfolio that automatically updates using GitHub data, CI/CD, and automation."
+                techs={["Next.js", "TypeScript", "GitHub Actions"]}
+                href="https://github.com/Jachamfuor/personal-portfolio"
+              />
+
             </div>
 
 
@@ -482,17 +491,17 @@ export default function Home() {
             <ul className="mt-6 space-y-2 pl-2">
               <h2 className="font-bold text-center">Get In Touch</h2>
               <li>
-                <a className="p-1" href="mailto:Jefferyachamfuor@gmail.com">
+                <a className="inline-flex items-center gap-2 p-1" href="mailto:Jefferyachamfuor@gmail.com">
                   <Mail size={18} /> Jefferyachamfuor@gmail.com
                 </a>
               </li>
               <li>
-                <a className="p-1" href="https://github.com/Jachamfuor">
+                <a className="inline-flex items-center gap-2 p-1" href="https://github.com/Jachamfuor">
                   <Github size={18} />github.com/Jachamfuor
                 </a>
               </li>
               <li>
-                <a className="p-1" href="https://www.linkedin.com/in/jachamfuor/">
+                <a className="inline-flex items-center gap-2 p-1" href="https://www.linkedin.com/in/jachamfuor/">
                   <Linkedin size={18} />linkedin.com/in/jefferyachamfuor
                 </a>
               </li>

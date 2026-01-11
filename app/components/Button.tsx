@@ -20,7 +20,7 @@ const variantStyles: Record<ButtonVariant, string> = {
   glow:
     "bg-neutral-200/5 text-white border border-transparent hover:border-pink-500 hover:shadow-[0_0_20px_3px_rgba(236,72,153,1)]",
   hover:
-    "bg-black border border-gray-100 shadow-md hover:shadow-2xl hover:-translate-y-1",
+    " border border-gray-100 shadow-md hover:shadow-2xl hover:-translate-y-1",
   clear:
     "text-white hover:bg-gray-100",
 };

@@ -29,10 +29,10 @@ export default function CardwImg({
             {/* CONTENT */}
             <div className="p-4 sm:p-5 lg:p-6 flex flex-col gap-4 lg:gap-5 flex-1">
                 <div className="space-y-2">
-                    <h3 className="text-lg font-semibold text-black leading-snug">
+                    <h3 className="text-lg font-semibold leading-snug">
                         {title}
                     </h3>
-                    <p className="text-sm text-gray-700 leading-relaxed">
+                    <p className="text-sm leading-relaxed">
                         {description}
                     </p>
                 </div>
