@@ -102,7 +102,7 @@ export default function Home() {
 
             <div className="flex flex-col lg:flex-row gap-6 lg:gap-8 items-stretch">
               {/* ABOUT TEXT */}
-              <p className="text-md text-left font-mono text-gray-500 leading-relaxed lg:w-2/3">
+              <p className="text-md text-left font-mono text-muted leading-relaxed lg:w-2/3">
                 I’m a Computer Science student at Virginia Tech who is passionate about
                 building thoughtful, impactful technology. I’m currently pursuing my
                 Bachelor’s degree and expect to graduate in May 2027.
@@ -133,7 +133,7 @@ export default function Home() {
                   Facts
                 </h2>
 
-                <ul className="space-y-3 text-md text-gray-400 font-mono">
+                <ul className="space-y-3 text-md text-muted font-mono">
                   <li>Virginia Tech CS</li>
                   <li>Class of 2027</li>
                   <li>Software Developer</li>
@@ -184,7 +184,7 @@ export default function Home() {
               <h1 className="font-mono font-semibold">
                 Virginia Polytechnic Institue and State University
               </h1>
-              <h2 className="text-gray-600">
+              <h2 className="">
                 B.S. in Computer Science<br />Minor in CyberSecurity
               </h2>
 
@@ -207,10 +207,10 @@ export default function Home() {
           {/* GitHub Automation */}
           <section className="mx-auto max-w-5xl px-4 space-y-4">
             <h2 className="text-2xl font-semibold">Latest Activity</h2>
-            <p className="text-sm text-gray-600">
+            <p className="text-sm text-muted">
               Last updated {timeAgo(activity.generatedAt)}
             </p>
-            <p className="text-sm text-gray-600">
+            <p className="text-sm text-muted">
               {" "} {new Date(activity.generatedAt).toLocaleString()}
             </p>
 
@@ -220,8 +220,8 @@ export default function Home() {
                 <ul className="space-y-2 text-sm">
                   {activity.recentCommits?.length ? (
                     activity.recentCommits.map((c: any) => (
-                      <li key={`${c.repo}-${c.sha}`} className="text-gray-700 dark:text-gray-300">
-                        <div className="text-xs text-gray-500 dark:text-gray-400">
+                      <li key={`${c.repo}-${c.sha}`} className="">
+                        <div className="text-xs text-muted">
                           {c.repo}
                         </div>
                         {c.url ? (
@@ -234,7 +234,7 @@ export default function Home() {
                       </li>
                     ))
                   ) : (
-                    <li className="text-gray-600 dark:text-gray-400">
+                    <li className="">
                       No recent commits found.
                     </li>
                   )}
@@ -250,16 +250,16 @@ export default function Home() {
                         <a className="underline font-medium" href={r.url}>
                           {r.name}
                         </a>
-                        <div className="text-gray-600 dark:text-gray-400">
+                        <div className="text-muted">
                           {r.description}
                         </div>
-                        <div className="text-xs text-gray-500 dark:text-gray-500">
+                        <div className="text-xs">
                           {r.language || "—"} · ★ {r.stars}
                         </div>
                       </li>
                     ))
                   ) : (
-                    <li className="text-gray-500 dark:text-gray-400">
+                    <li className="">
                       No repos found.
                     </li>
                   )}
@@ -304,11 +304,11 @@ export default function Home() {
           {/* SKILLS */}
           <div className="mx-auto max-w-5xl px-4 space-y-6 ">
             <header className="text-2xl font-semibold">Skills</header>
-            <p className="font-mono font-semibold text-gray-600">
+            <p className="font-mono font-semibold text-muted">
               My arsenal for building applications
             </p>
 
-            <ul className="grid gap-4 lg:gap-6 text-gray-700 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+            <ul className="grid gap-4 lg:gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
               <SkillCard
                 title="Languages"
                 icon={Code2}

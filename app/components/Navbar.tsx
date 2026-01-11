@@ -12,13 +12,13 @@ const links = [
 
 export default function NavBar() {
     return (
-        <header className="sticky top-0 z-50 dark:bg-white/50 bg-black/40 backdrop-blur">
+        <header className="sticky top-0 z-50 nav-glass backdrop-blur">
             <nav className="mx-auto flex max-w-5xl items-center justify-between px-4 py-3">
                 <Link href="/" className="font-semibold tracking-tight">
                     Jeffery Achamfuor
                 </Link>
                 <div className="flex items-center gap-4">
-                    <div className="flex gap-4 text-sm text-gray-700 dark:text-gray-300">
+                    <div className="flex gap-4 text-sm ">
                         {links.map((l) => (
                             <Link
                                 key={l.href}
