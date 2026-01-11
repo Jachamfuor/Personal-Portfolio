@@ -54,11 +54,11 @@ export default function CardwImg({
                 {/* BUTTON */}
                 <div className="mt-auto pt-2">
                 <Button
-                    description="GitHub"
+                    
                     href={href}
                     variant="hover"
                     external
-                />
+                >GitHub</Button>
                 </div>
             </div>
         </CardShell>
