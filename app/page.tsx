@@ -171,7 +171,9 @@ export default function Home() {
           <section className="space-y-4">
             <h2 className="text-2xl font-semibold">Latest Activity</h2>
             <p className="text-sm text-gray-600">
-              Last updated {timeAgo(activity.generatedAt)} •{" "}
+              Last updated {timeAgo(activity.generatedAt)} 
+            </p><br />
+            <p className="text-sm text-gray-600">{" "}
               {new Date(activity.generatedAt).toLocaleString()}
             </p>
 
