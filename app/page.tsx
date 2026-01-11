@@ -493,7 +493,7 @@ export default function Home() {
               </li>
               <li>
                 <a className="p-1" href="https://www.linkedin.com/in/jachamfuor/">
-                  <Linkedin size={18} />linkedin.com/in/jachamfuor
+                  <Linkedin size={18} />linkedin.com/in/jefferyachamfuor
                 </a>
               </li>
               <h2 className="mt-10 font-bold">Open to Opportunites</h2>
