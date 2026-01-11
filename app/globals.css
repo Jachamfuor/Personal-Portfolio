@@ -1,27 +1,44 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
+  --background: #124022;
   --foreground: #171717;
-}
 
+  
+  --card: #ffffff;
+  --card-foreground: #171717;
+  --border: rgba(0, 0, 0, 0.1);
+}
+/**
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
+  */
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+.dark {
+  --background: #510424;
+  --foreground: #ededed;
+
+  
+  --card: #171717;
+  --card-foreground: #ededed;
+  --border: rgba(255, 255, 255, 0.1);
+}
+
+.card-shell {
+  background: var(--card);
+  color: var(--card-foreground);
+  border: 1px solid var(--border);
 }
 
 body {
+  
   background: var(--background);
   color: var(--foreground);
+
   font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -76,6 +93,57 @@ body {
 }
 
 
+/* From Uiverse.io by Praashoo7 */
+/* The switch - the box around the slider */
+/* Uiverse toggle — scoped + responsive */
+.switch {
+  font-size: clamp(14px, 1.2vw, 17px);
+  position: relative;
+  display: inline-block;
+  width: 3.5em;
+  height: 2em;
+
+  flex: 0 0 auto;
+  min-width: 3.5em;
+  min-height: 2em;
+  line-height: 0;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.switch .slider {
+  position: absolute;
+  inset: 0;
+  cursor: pointer;
+  background-color: #ccc;
+  box-shadow: inset 2px 5px 10px rgba(0, 0, 0, 0.3);
+  transition: 0.4s;
+  border-radius: 5px;
+}
+
+.switch .slider:before {
+  position: absolute;
+  content: "";
+  height: 1.4em;
+  width: 0.1em;
+  left: 0.3em;
+  bottom: 0.3em;
+  background-color: white;
+  transition: 0.4s;
+}
+
+.switch input:checked+.slider {
+  background-color: #171717;
+  box-shadow: inset 2px 5px 10px rgb(0, 0, 0);
+}
+
+.switch input:checked+.slider:before {
+  transform: translateX(2.8em) rotate(360deg);
+}
 
 
 
@@ -238,17 +306,16 @@ body {
   inset: -10% -6% -10% 0;
   pointer-events: none;
   opacity: 0;
-  background: linear-gradient(
-    to right,
-    rgba(255, 255, 255, 0.10),
-    rgba(255, 255, 255, 0.02) 30%,
-    rgba(0, 0, 0, 0.65)
-  );
+  background: linear-gradient(to right,
+      rgba(255, 255, 255, 0.10),
+      rgba(255, 255, 255, 0.02) 30%,
+      rgba(0, 0, 0, 0.65));
   transform-origin: left center;
   transform: skewY(-4deg);
 
   animation: crease-in 1.25s ease forwards;
-  animation-delay: 0.95s; /* MATCH fold-away delay */
+  animation-delay: 0.95s;
+  /* MATCH fold-away delay */
 }
 
 .wm-ja-right::after {
@@ -263,7 +330,8 @@ body {
   filter: blur(0.2px);
 
   animation: fold-line 1.25s ease forwards;
-  animation-delay: 0.95s; /* MATCH fold-away delay */
+  animation-delay: 0.95s;
+  /* MATCH fold-away delay */
 }
 
 
@@ -340,7 +408,8 @@ body {
 @keyframes ja-disappear {
   to {
     opacity: 0;
-    filter: blur(6px); /* optional; remove if you want perfectly crisp fade */
+    filter: blur(6px);
+    /* optional; remove if you want perfectly crisp fade */
   }
 }
 
@@ -370,7 +439,8 @@ body {
   will-change: opacity, transform, filter;
 
   animation: full-in 0.55s ease forwards;
-  animation-delay: 2.65s; /* starts when pulse starts */
+  animation-delay: 2.65s;
+  /* starts when pulse starts */
 }
 
 
@@ -388,7 +458,7 @@ body {
   height: 1em;
   perspective: 1200px;
   transform: translateX(calc(var(--ja-shift) - 2em));
-  
+
 }
 
 .full-letter {

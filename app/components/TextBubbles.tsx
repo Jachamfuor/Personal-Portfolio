@@ -15,7 +15,7 @@ const variantStyles: Record<BubbleVariant, string> = {
     hover:
         "rounded-full border px-3 py-1 text-xs text-gray-500 hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 ease-linear ",
     clear:
-        "text-white hover:bg-gray-100",
+        "text-white hover:bg-gray-100 border rounded-xl",
 };
 export default function Bubble({
     skills = [],

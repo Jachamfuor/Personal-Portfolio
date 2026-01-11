@@ -11,4 +11,13 @@ const config: Config = {
   plugins: [require("@tailwindcss/typography")],
 };
 
+module.exports = {
+  darkMode: "class",
+  content: [
+    "./app/**/*.{js,ts,jsx,tsx}",
+    "./components/**/*.{js,ts,jsx,tsx}",
+  ],
+  theme: { extend: {} },
+  plugins: [],
+};
 export default config;

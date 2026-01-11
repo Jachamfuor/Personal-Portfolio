@@ -18,7 +18,7 @@ export default function SkillCard({
                 {/* TITLE */}
                 <div className="flex items-center justify-center gap-2">
                     {Icon && <Icon className="h-5 w-5 text-gray-700" aria-hidden="true" />}
-                    <h3 className="text-lg font-semibold text-black leading-snug">
+                    <h3 className="text-lg font-semibold leading-snug">
                         {title}
                     </h3>
                 </div>
