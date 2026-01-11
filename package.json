@@ -6,7 +6,11 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    
+    "generate:activity": "node scripts/generate-activity.mjs",
+    "predev": "npm run generate:activity",
+    "prebuild": "npm run generate:activity"
   },
   "dependencies": {
     "@tailwindcss/typography": "^0.5.19",
