@@ -1,20 +1,20 @@
 {
-  "generatedAt": "2026-01-11T20:22:04.210Z",
+  "generatedAt": "2026-01-15T20:34:36.134Z",
   "username": "Jachamfuor",
   "recentCommits": [
+    {
+      "repo": "Jachamfuor/Personal-Portfolio",
+      "message": "CHANGED: Button UI",
+      "sha": "bfdcde64f16deadb1845801a2fd9696ae433a035",
+      "url": "https://github.com/Jachamfuor/Personal-Portfolio/commit/bfdcde64f16deadb1845801a2fd9696ae433a035",
+      "createdAt": "2026-01-11T20:34:07Z"
+    },
     {
       "repo": "Jachamfuor/Personal-Portfolio",
       "message": "FIXED: Linkedin url error in connect",
       "sha": "993857ccb5549af1550f6f226706dbadc662770c",
       "url": "https://github.com/Jachamfuor/Personal-Portfolio/commit/993857ccb5549af1550f6f226706dbadc662770c",
       "createdAt": "2026-01-11T19:58:39Z"
-    },
-    {
-      "repo": "Jachamfuor/Personal-Portfolio",
-      "message": "CHANGE: UI/darkmode changes",
-      "sha": "917338c91731b0f952a11dea910188a04ad42a4a",
-      "url": "https://github.com/Jachamfuor/Personal-Portfolio/commit/917338c91731b0f952a11dea910188a04ad42a4a",
-      "createdAt": "2026-01-11T19:47:34Z"
     }
   ],
   "recentRepos": [
@@ -25,7 +25,7 @@
       "language": "TypeScript",
       "stars": 0,
       "url": "https://github.com/Jachamfuor/Personal-Portfolio",
-      "updatedAt": "2026-01-11T19:58:44Z"
+      "updatedAt": "2026-01-11T20:34:12Z"
     }
   ]
 }
