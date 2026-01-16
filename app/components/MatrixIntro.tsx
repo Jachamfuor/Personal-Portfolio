@@ -50,16 +50,33 @@ export default function MatrixIntro({ onAnimationComplete }: MatrixIntroProps) {
     }, []);
 
     // Stage Controller
+    // Stage Controller (SAFE)
     useEffect(() => {
-        const sequence = async () => {
-            await new Promise(r => setTimeout(r, 1200)); setStage('fold');
-            await new Promise(r => setTimeout(r, 1000)); setStage('recenter');
-            await new Promise(r => setTimeout(r, 800)); setStage('expand');
-            await new Promise(r => setTimeout(r, 2500)); setStage('fade');
-            await new Promise(r => setTimeout(r, 1000)); onAnimationComplete();
+        let cancelled = false;
+
+        // Strict-mode guard: don't run twice in dev
+        // (runs once per real mount)
+        const timeouts: number[] = [];
+
+        const set = (ms: number, fn: () => void) => {
+            const id = window.setTimeout(() => {
+                if (!cancelled) fn();
+            }, ms);
+            timeouts.push(id);
         };
-        sequence();
+
+        set(1200, () => setStage("fold"));
+        set(2200, () => setStage("recenter")); // 1200 + 1000
+        set(3000, () => setStage("expand"));   // + 800
+        set(5500, () => setStage("fade"));     // + 2500
+        set(6500, () => onAnimationComplete()); // + 1000
+
+        return () => {
+            cancelled = true;
+            timeouts.forEach(clearTimeout);
+        };
     }, [onAnimationComplete]);
+
 
     return (
         <div className={`matrix-intro-root ${stage === 'fade' ? 'matrix-exit' : ''}`}>
