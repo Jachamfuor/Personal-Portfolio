@@ -96,7 +96,7 @@ export default function Home() {
         </section>
 
         {/* FEATURED PROJECTS */}
-        <section className=" bg-neutral-200/5 space-y-12 sm:space-y-16 lg:space-y-20 py-12 sm:py-16 lg:py-20">
+        <section className=" glass-bg space-y-12 sm:space-y-16 lg:space-y-20 py-12 sm:py-16 lg:py-20">
           <div className="mx-auto max-w-5xl px-4 space-y-6">
             <header className="text-2xl font-semibold">Featured Projects</header>
 
@@ -321,7 +321,7 @@ export default function Home() {
         </section>
 
         {/* SKILLS */}
-        <section className="w-full bg-neutral-200/5 space-y-12 sm:space-y-16 lg:space-y-20 py-12 sm:py-16 lg:py-20">
+        <section className="w-full glass-bg  space-y-12 sm:space-y-16 lg:space-y-20 py-12 sm:py-16 lg:py-20">
           <div className="mx-auto max-w-5xl px-4 space-y-6 ">
             <header className="text-2xl font-semibold">Skills</header>
             <p className="font-mono font-semibold text-muted">
@@ -487,8 +487,8 @@ export default function Home() {
         </section>
 
         {/* EDUCATION */}
-        <section className="bg-neutral-200/5 space-y-6 sm:space-y-8 lg:space-y-10 py-12 sm:py-16 lg:py-20">
-          <div className="mx-auto max-w-5xl px-4 bg-neutral-200/3 p-6 sm:p-8 lg:p-10 rounded-md">
+        <section className="glass-bg space-y-6 sm:space-y-8 lg:space-y-10 py-12 sm:py-16 lg:py-20">
+          <div className="mx-auto max-w-5xl px-4 glass p-6 sm:p-8 lg:p-10 rounded-md">
             {/* Header */}
             <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6 mb-8">
               <div className="flex items-center gap-4">
@@ -542,7 +542,7 @@ export default function Home() {
 
         {/* ABOUT ME */}
         <section className="w-full space-y-12 sm:space-y-16 lg:space-y-20 py-12 sm:py-16 lg:py-20">
-          <div className="mx-auto max-w-5xl px-4 bg-neutral-200/3 p-6 sm:p-8 lg:p-10 rounded-md ">
+          <div className="mx-auto max-w-5xl px-4 glass p-6 sm:p-8 lg:p-10 rounded-md ">
             <header className="text-2xl font-mono font-semibold text-center mb-6 sm:mb-8">
               About Me
             </header>
@@ -611,7 +611,7 @@ export default function Home() {
         </section>
 
         {/* CTA */}
-        <section className="bg-neutral-200/5 space-y-12 sm:space-y-16 lg:space-y-20 py-12 sm:py-16 lg:py-20">
+        <section className="glass-bg space-y-12 sm:space-y-16 lg:space-y-20 py-12 sm:py-16 lg:py-20">
           <div className="font-mono rounded-md p-2">
             <h1 className="text-3xl text-black font-bold rounded-md bg-gray-300 p-2 ">Let's Connect</h1>
             <ul className="mt-6 space-y-2 pl-2">

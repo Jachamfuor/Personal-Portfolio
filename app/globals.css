@@ -1,5 +1,5 @@
 @import "tailwindcss";
-
+/**
 :root {
   --background: #124022;
   --foreground: #171717;
@@ -10,9 +10,9 @@
   --card-foreground: #171717;
 
   --muted: rgba(255, 255, 255, 0.10);
-  /* soft overlay */
+  | soft overlay 
   --muted-foreground: rgba(0, 0, 0, 0.65);
-  /* muted text */
+  |muted text 
 
   --border: rgba(0, 0, 0, 0.10);
 
@@ -29,11 +29,64 @@
   --overlay-top: rgba(0, 0, 0, 0.05);
   --overlay-bottom: rgba(0, 0, 0, 0.35);
 
-  /* light gradients */
-  --grad-a: rgba(167, 243, 208, 0.70); /* emerald-200 */
+  | light gradients 
+  --grad-a: rgba(167, 243, 208, 0.70); | emerald-200 
   --grad-b: rgba(255, 255, 255, 0.30);
   --grad-c: rgba(229, 229, 229, 0.70);
 }
+*/
+
+:root {
+  /* PAGE BACKGROUND — VISIBLE PALETTE */
+  --background: linear-gradient(
+    180deg,
+    #00A9FF 0%,
+    #89CFF3 35%,
+    #A0E9FF 65%,
+    #CDF5FD 100%
+    
+  );
+
+  --foreground: #0b1a26;
+
+  /* cards */
+  --card: rgba(255, 255, 255, 0.92);
+  --card-foreground: #0b1a26;
+
+  /* muted text */
+  --muted: rgba(255, 255, 255, 0.4);
+  --muted-foreground: rgba(11, 26, 38, 0.65);
+
+  /* borders & shadows */
+  --border: rgba(0, 0, 0, 0.08);
+  --shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+
+  /* tiles */
+  --tile-bg: rgba(255, 255, 255, 0.85);
+  --tile-border: rgba(0, 0, 0, 0.08);
+  --tile-text: #0b1a26;
+  --tile-muted: rgba(11, 26, 38, 0.6);
+
+  /* pills / chips */
+  --pill-bg: #CDF5FD;
+  --pill-border: #89CFF3;
+
+  /* overlays */
+  --overlay-top: rgba(255, 255, 255, 0.25);
+  --overlay-bottom: rgba(0, 0, 0, 0.15);
+
+  /* GRADIENT TILE COLORS — EXACT PALETTE */
+  --grad-a: #00A9FF;
+  --grad-b: #89CFF3;
+  --grad-c: #A0E9FF;
+
+   /* LIGHT MODE: darker glass (smoked) */
+  --glass: rgba(15, 23, 42, 0.14);          /* slate tint */
+  --glass-border: rgba(15, 23, 42, 0.22);
+
+  --layout: #00a9ff;
+}
+
 
 /**
 @theme inline {
@@ -44,38 +97,64 @@
 }
   */
 
+
 .dark {
-  --background: #510424;
-  --foreground: #ededed;
-  --glass: #0c0c0c;
-  --glass-border: rgba(255, 255, 255, 0.12);
+  /* Core surfaces (palette 1 base) */
+  --background: #1a0f12;              /* near-black maroon 510424 */
+  --foreground: rgba(255, 255, 255, 0.92);
 
+  --card: rgba(255, 255, 255, 0.06);  /* glassy surface */
+  --card-foreground: rgba(255, 255, 255, 0.92);
 
-  --card: #171717;
-  --card-foreground: #ededed;
+  /* Glass system */
+  --glass: rgba(14, 10, 12, 0.70);
+  --glass-border: rgba(245, 218, 167, 0.14); /* subtle warm edge */
 
+  /* Muted text */
   --muted: rgba(255, 255, 255, 0.06);
-  --muted-foreground: #4a5565;
+  --muted-foreground: rgba(255, 255, 255, 0.62);
 
-  --border: rgba(255, 255, 255, 0.10);
+  /* Borders & shadows */
+  --border: rgba(245, 218, 167, 0.12);
+  --shadow: 0 14px 40px rgba(0, 0, 0, 0.65);
 
-  --shadow: 0 12px 40px rgba(0, 0, 0, 0.55);
+  /* Tiles */
+  --tile-bg: rgba(255, 255, 255, 0.05);
+  --tile-border: rgba(245, 218, 167, 0.14);
+  --tile-text: rgba(255, 255, 255, 0.92);
+  --tile-muted: rgba(255, 255, 255, 0.68);
 
-   --tile-bg: rgba(255, 255, 255, 0.05);
-  --tile-border: rgba(255, 255, 255, 0.10);
-  --tile-text: rgba(255, 255, 255, 1);
-  --tile-muted: rgba(255, 255, 255, 0.70);
+  /* Pills (Apple-like: calm, not bright) */
+  --pill-bg: rgba(245, 218, 167, 0.10);
+  --pill-border: rgba(245, 218, 167, 0.16);
 
-  --pill-bg: rgba(255, 255, 255, 0.10);
-  --pill-border: rgba(255, 255, 255, 0.10);
-
-  --overlay-top: rgba(0, 0, 0, 0.10);
+  /* Overlays */
+  --overlay-top: rgba(0, 0, 0, 0.08);
   --overlay-bottom: rgba(0, 0, 0, 0.55);
 
-  /* dark gradients */
-  --grad-a: rgba(16, 185, 129, 0.20); /* emerald */
-  --grad-b: rgba(255, 255, 255, 0.00);
-  --grad-c: rgba(9, 9, 11, 0.60);
+  /* Dark gradients (palette 1) */
+  --grad-a: rgba(132, 42, 59, 0.34);  /* #842A3B (wine) */
+  --grad-b: rgba(163, 72, 90, 0.18);  /* #A3485A (rose) */
+  --grad-c: rgba(0, 0, 0, 0.55);      /* depth / vignette */
+}
+
+
+
+/* Section background overlay that is visible in LIGHT MODE */
+.glass-bg {
+  /* uses your palette 1 blue accent so it reads on light background */
+  background-color: rgba(0, 169, 255, 0.10);  /* #00A9FF @ 10% */
+  border-top: 1px solid rgba(0, 0, 0, 0.04);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.04);
+}
+
+/* Keep DARK MODE exactly like your Tailwind bg-neutral-200/5 behavior */
+.dark .glass-bg {
+  background-color: color-mix(
+    in oklab,
+    var(--color-neutral-200) 5%,
+    transparent
+  );
 }
 
 .card-shell {
@@ -93,11 +172,16 @@ body {
 }
 
 .glass {
-  background: var(--glass);
-  border: 1px solid var(--glass-border);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.10);
+  background: rgba(15, 23, 42, 0.12); /* darker */
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+
+/* DARK MODE: keep your current behavior */
+.dark .glass {
+  background: rgba(255, 255, 255, 0.05); /* matches your dark look */
+  border: 1px solid rgba(255, 255, 255, 0.10);
 }
 
 .nav-glass {
@@ -124,6 +208,11 @@ body {
 
 .bg-muted {
   background: var(--muted);
+}
+
+.layout{
+background-color: var(--background);
+
 }
 
 .text-muted {

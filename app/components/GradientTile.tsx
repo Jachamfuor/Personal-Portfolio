@@ -14,10 +14,24 @@ export function GradientTile({
 }) {
     return (
         <Tile className={`h-full p-4 sm:p-6 lg:p-7 ${className}`}>
-            {/* Gradient layers */}
-            <div className="absolute inset-0 bg-gradient-to-br from-emerald-200/70 via-white/30 to-neutral-200/70" />
-            <div className="absolute inset-0 opacity-30 bg-[radial-gradient(circle_at_20%_20%,rgba(16,185,129,0.25),transparent_55%),radial-gradient(circle_at_80%_30%,rgba(59,130,246,0.18),transparent_55%)]" />
+            {/* Gradient layer */}
+            <div
+                className="absolute inset-0"
+                style={{
+                    background: `linear-gradient(135deg, var(--grad-a), var(--grad-b), var(--grad-c))`,
+                }}
+            />
 
+            {/* Soft glow texture */}
+            <div
+                className="absolute inset-0 opacity-100"
+                style={{
+                    background: `
+            radial-gradient(circle at 20% 20%, rgba(245, 218, 167, 0.20), transparent 55%),
+            radial-gradient(circle at 80% 30%, rgba(163, 72, 90, 0.22), transparent 60%)
+          `,
+                }}
+            />
             {/* Content */}
             <div className="relative flex h-full flex-col min-w-0">
                 <div className="min-w-0">

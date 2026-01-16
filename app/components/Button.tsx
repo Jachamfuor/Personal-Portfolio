@@ -22,7 +22,7 @@ const variantStyles: Record<ButtonVariant, string> = {
   hover:
     " border border-gray-100 shadow-md hover:shadow-2xl hover:-translate-y-1",
   clear:
-    "border text-white hover:bg-gray-100",
+    "border border-neutral-700 text-white hover:bg-gray-100",
 };
 
 const shapeStyles: Record<ButtonShape, string> = {

@@ -1,20 +1,20 @@
 {
-  "generatedAt": "2026-01-15T20:34:36.134Z",
+  "generatedAt": "2026-01-15T23:21:20.100Z",
   "username": "Jachamfuor",
   "recentCommits": [
+    {
+      "repo": "Jachamfuor/Personal-Portfolio",
+      "message": "CHANGED: redid wireframe and cleared unused files",
+      "sha": "94acb5885ddfc7f70677795a1e2658bfe6f66f49",
+      "url": "https://github.com/Jachamfuor/Personal-Portfolio/commit/94acb5885ddfc7f70677795a1e2658bfe6f66f49",
+      "createdAt": "2026-01-15T23:01:03Z"
+    },
     {
       "repo": "Jachamfuor/Personal-Portfolio",
       "message": "CHANGED: Button UI",
       "sha": "bfdcde64f16deadb1845801a2fd9696ae433a035",
       "url": "https://github.com/Jachamfuor/Personal-Portfolio/commit/bfdcde64f16deadb1845801a2fd9696ae433a035",
       "createdAt": "2026-01-11T20:34:07Z"
-    },
-    {
-      "repo": "Jachamfuor/Personal-Portfolio",
-      "message": "FIXED: Linkedin url error in connect",
-      "sha": "993857ccb5549af1550f6f226706dbadc662770c",
-      "url": "https://github.com/Jachamfuor/Personal-Portfolio/commit/993857ccb5549af1550f6f226706dbadc662770c",
-      "createdAt": "2026-01-11T19:58:39Z"
     }
   ],
   "recentRepos": [
@@ -25,7 +25,7 @@
       "language": "TypeScript",
       "stars": 0,
       "url": "https://github.com/Jachamfuor/Personal-Portfolio",
-      "updatedAt": "2026-01-11T20:34:12Z"
+      "updatedAt": "2026-01-15T23:01:09Z"
     }
   ]
 }
