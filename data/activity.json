@@ -1,20 +1,20 @@
 {
-  "generatedAt": "2026-01-16T05:41:11.302Z",
+  "generatedAt": "2026-01-16T07:07:46.676Z",
   "username": "Jachamfuor",
   "recentCommits": [
+    {
+      "repo": "Jachamfuor/Personal-Portfolio",
+      "message": "DEBUG: intro animation",
+      "sha": "1c6c33a4a145bc5e7cb90e483fa43365d83a5289",
+      "url": "https://github.com/Jachamfuor/Personal-Portfolio/commit/1c6c33a4a145bc5e7cb90e483fa43365d83a5289",
+      "createdAt": "2026-01-16T05:42:44Z"
+    },
     {
       "repo": "Jachamfuor/Personal-Portfolio",
       "message": "CHANGED: finalized UI theme color",
       "sha": "baf19e18c28c661edb736335c4c07a71a1fcff80",
       "url": "https://github.com/Jachamfuor/Personal-Portfolio/commit/baf19e18c28c661edb736335c4c07a71a1fcff80",
       "createdAt": "2026-01-16T02:01:35Z"
-    },
-    {
-      "repo": "Jachamfuor/Personal-Portfolio",
-      "message": "CHANGED: redid wireframe and cleared unused files",
-      "sha": "94acb5885ddfc7f70677795a1e2658bfe6f66f49",
-      "url": "https://github.com/Jachamfuor/Personal-Portfolio/commit/94acb5885ddfc7f70677795a1e2658bfe6f66f49",
-      "createdAt": "2026-01-15T23:01:03Z"
     }
   ],
   "recentRepos": [
@@ -25,7 +25,7 @@
       "language": "TypeScript",
       "stars": 0,
       "url": "https://github.com/Jachamfuor/Personal-Portfolio",
-      "updatedAt": "2026-01-16T02:01:40Z"
+      "updatedAt": "2026-01-16T05:42:52Z"
     }
   ]
 }

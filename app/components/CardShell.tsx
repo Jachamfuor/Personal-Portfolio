@@ -14,9 +14,9 @@ export default function CardShell({ children, className = "", showDots= true}: C
         >
             {showDots && (
                 <div className="flex gap-1 p-2">
-                    <span className="inline-block h-3 w-3 rounded-full bg-red-500" />
-                    <span className="inline-block h-3 w-3 rounded-full bg-yellow-500" />
-                    <span className="inline-block h-3 w-3 rounded-full bg-green-500" />
+                    <span className="inline-block h-3 w-3 rounded-full" style={{ background: "var(--dot-red)" }} />
+                    <span className="inline-block h-3 w-3 rounded-full" style={{ background: "var(--dot-yellow)" }} />
+                    <span className="inline-block h-3 w-3 rounded-full" style={{ background: "var(--dot-green)" }} />
                 </div>
             )}
 

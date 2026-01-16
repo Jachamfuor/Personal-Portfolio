@@ -73,7 +73,7 @@ export default function Home() {
                 />
               </header>
 
-              <div className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4 pt-2">
+              <div className="flex flex-row justify-center gap-3 sm:gap-4 pt-2">
                 <Button
                   href="/Jeffery Achamfuor's CV.pdf"
                   variant="glow"
@@ -453,7 +453,7 @@ export default function Home() {
                 </div>
 
                 {/* (9) Left: Values */}
-                <div className="row-span-1 md:col-start-1 md:col-span-4 md:row-start-5 md:row-span-1 bg-amber-600/60 rounded-3xl overflow-hidden">
+                <div className="row-span-1 md:col-start-1 md:col-span-4 md:row-start-5 md:row-span-1 bg-amber-600/60 rounded-lg overflow-hidden">
                   <GradientTile
                     title="Values I lead with."
                     subtitle="Respect · Accountability · Curiosity · Care for others"
@@ -463,7 +463,7 @@ export default function Home() {
                 </div>
 
                 {/* (10) Right: Image */}
-                <div className="row-span-1 md:col-start-9 md:col-span-4 md:row-start-5 md:row-span-1 bg-amber-600/60 rounded-3xl overflow-hidden">
+                <div className="row-span-1 md:col-start-9 md:col-span-4 md:row-start-5 md:row-span-1 bg-amber-600/60 rounded-lg overflow-hidden">
                   <ImageTile
                     label="(Placeholder)"
                     className="h-full w-full"
@@ -611,7 +611,7 @@ export default function Home() {
           {/* CTA */}
           <section className="glass-bg space-y-12 sm:space-y-16 lg:space-y-20 py-12 sm:py-16 lg:py-20">
             <div className="font-mono rounded-md p-2">
-              <h1 className="text-3xl text-black font-bold rounded-md bg-gray-300 p-2 ">Let's Connect</h1>
+              <h1 className="text-2xl text-black font-bold rounded-md bg-gray-100 p-2 ">Let's Connect</h1>
               <ul className="mt-6 space-y-2 pl-2">
                 <h2 className="font-bold text-center">Get In Touch</h2>
                 <li>

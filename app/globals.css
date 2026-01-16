@@ -38,14 +38,11 @@
 
 :root {
   /* PAGE BACKGROUND — VISIBLE PALETTE */
-  --background: linear-gradient(
-    180deg,
-    #00A9FF 0%,
-    #89CFF3 35%,
-    #A0E9FF 65%,
-    #CDF5FD 100%
-    
-  );
+  --background: linear-gradient(180deg,
+      #00A9FF 0%,
+      #89CFF3 35%,
+      #A0E9FF 65%,
+      #CDF5FD 100%);
 
   --foreground: #0b1a26;
 
@@ -80,11 +77,16 @@
   --grad-b: #89CFF3;
   --grad-c: #A0E9FF;
 
-   /* LIGHT MODE: darker glass (smoked) */
-  --glass: rgba(15, 23, 42, 0.14);          /* slate tint */
+  /* LIGHT MODE: darker glass (smoked) */
+  --glass: rgba(15, 23, 42, 0.14);
+  /* slate tint */
   --glass-border: rgba(15, 23, 42, 0.22);
 
   --layout: #00a9ff;
+
+  --dot-red: theme(colors.blue.400);
+  --dot-yellow: theme(colors.purple.400);
+  --dot-green: theme(colors.pink.400);
 }
 
 
@@ -100,15 +102,18 @@
 
 .dark {
   /* Core surfaces (palette 1 base) */
-  --background: #1a0f12;              /* near-black maroon 510424 */
+  --background: #1a0f12;
+  /* near-black maroon 510424 */
   --foreground: rgba(255, 255, 255, 0.92);
 
-  --card: rgba(255, 255, 255, 0.06);  /* glassy surface */
+  --card: #171717;
+  /* glassy surface */
   --card-foreground: rgba(255, 255, 255, 0.92);
 
   /* Glass system */
   --glass: rgba(14, 10, 12, 0.70);
-  --glass-border: rgba(245, 218, 167, 0.14); /* subtle warm edge */
+  --glass-border: rgba(245, 218, 167, 0.14);
+  /* subtle warm edge */
 
   /* Muted text */
   --muted: rgba(255, 255, 255, 0.06);
@@ -133,28 +138,33 @@
   --overlay-bottom: rgba(0, 0, 0, 0.55);
 
   /* Dark gradients (palette 1) */
-  --grad-a: rgba(132, 42, 59, 0.34);  /* #842A3B (wine) */
-  --grad-b: rgba(163, 72, 90, 0.18);  /* #A3485A (rose) */
-  --grad-c: rgba(0, 0, 0, 0.55);      /* depth / vignette */
-}
+  --grad-a: rgba(132, 42, 59, 0.34);
+  /* #842A3B (wine) */
+  --grad-b: rgba(163, 72, 90, 0.18);
+  /* #A3485A (rose) */
+  --grad-c: rgba(0, 0, 0, 0.55);
+  /* depth / vignette */
 
+    --dot-red: theme(colors.red.500);
+  --dot-yellow: theme(colors.yellow.500);
+  --dot-green: theme(colors.green.500);
+}
 
 
 /* Section background overlay that is visible in LIGHT MODE */
 .glass-bg {
   /* uses your palette 1 blue accent so it reads on light background */
-  background-color: rgba(0, 169, 255, 0.10);  /* #00A9FF @ 10% */
+  background-color: rgba(0, 169, 255, 0.10);
+  /* #00A9FF @ 10% */
   border-top: 1px solid rgba(0, 0, 0, 0.04);
   border-bottom: 1px solid rgba(0, 0, 0, 0.04);
 }
 
 /* Keep DARK MODE exactly like your Tailwind bg-neutral-200/5 behavior */
 .dark .glass-bg {
-  background-color: color-mix(
-    in oklab,
-    var(--color-neutral-200) 5%,
-    transparent
-  );
+  background-color: color-mix(in oklab,
+      var(--color-neutral-200) 5%,
+      transparent);
 }
 
 .card-shell {
@@ -172,7 +182,8 @@ body {
 }
 
 .glass {
-  background: rgba(15, 23, 42, 0.12); /* darker */
+  background: rgba(15, 23, 42, 0.12);
+  /* darker */
   border: 1px solid rgba(255, 255, 255, 0.18);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
@@ -180,7 +191,8 @@ body {
 
 /* DARK MODE: keep your current behavior */
 .dark .glass {
-  background: rgba(255, 255, 255, 0.05); /* matches your dark look */
+  background: rgba(255, 255, 255, 0.05);
+  /* matches your dark look */
   border: 1px solid rgba(255, 255, 255, 0.10);
 }
 
@@ -210,8 +222,8 @@ body {
   background: var(--muted);
 }
 
-.layout{
-background-color: var(--background);
+.layout {
+  background-color: var(--background);
 
 }
 
@@ -229,7 +241,8 @@ background-color: var(--background);
 
 /* tile system */
 .tile {
-  border-radius: 24px;           /* ~ rounded-3xl */
+  border-radius: 24px;
+  /* ~ rounded-3xl */
   overflow: hidden;
   position: relative;
   backdrop-filter: blur(8px);
